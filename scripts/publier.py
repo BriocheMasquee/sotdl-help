@@ -31,7 +31,7 @@ for dossier, slug in MODULES.items():
         for r, ds, fs in os.walk(os.path.join(RACINE, dossier)):
             ds[:] = [x for x in ds if not x.startswith('.')]
             for fn in fs:
-                if fn.startswith('.'): continue
+                if fn.startswith('.') or re.search(r' \d+(\.[^.]+)?$', fn): continue   # fichiers dupliqués par la synchronisation iCloud (« nom 2.ext »)
                 p = os.path.join(r, fn); z.write(p, os.path.relpath(p, os.path.join(RACINE, dossier)))
     manifeste = {'id': slug, 'name': m['name'], 'type': 'module', 'version': o.version, 'description': m.get('descr') or m.get('shortDescr', ''),
                  'download': f'https://github.com/{DEPOT}/releases/download/{o.version}/{slug}.module', 'compatibility': {'minimum': '5.2.0'}}
