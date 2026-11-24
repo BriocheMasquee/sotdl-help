@@ -1,0 +1,14 @@
+[
+  {
+    "descr" : "Language invented for Help SotDL: serves as an example of a Language rule.",
+    "id" : "83f37925-c153-54b8-878f-0216e1e96db0",
+    "name" : "Murmurish",
+    "slug" : "murmurish",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ],
+    "type" : "Language"
+  }
+]

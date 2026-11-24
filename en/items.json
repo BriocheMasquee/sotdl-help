@@ -1,0 +1,134 @@
+[
+  {
+    "data" : {
+      "availability" : "Common",
+      "itemType" : "Weapon",
+      "price" : "5 coins",
+      "weaponDamage" : "1d6",
+      "weaponHands" : "One",
+      "weaponType" : "BasicMelee"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "a9392d37-4437-5296-8d15-d0ac17b0e213",
+    "name" : "Ironshod Staff",
+    "slug" : "ironshod-staff",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "ammunitionRequirement" : true,
+      "ammunitionType" : "Bullet",
+      "availability" : "Common",
+      "itemType" : "Weapon",
+      "price" : "5 coins",
+      "weaponDamage" : "1d6",
+      "weaponHands" : "Two",
+      "weaponType" : "Ranged"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "e36b79f5-06b6-5687-b530-3388dce093ff",
+    "name" : "Marble Launcher",
+    "slug" : "marble-launcher",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "ammunitionType" : "Bullet",
+      "availability" : "Common",
+      "itemType" : "Weapon",
+      "price" : "5 coins",
+      "uses" : 20,
+      "weaponType" : "Ammunition"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "414f8757-7167-504e-a26c-78f16c6c2bc2",
+    "name" : "Glass Marbles",
+    "slug" : "glass-marbles",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "armorDefenseFixed" : 12,
+      "armorType" : "LightArmor",
+      "availability" : "Common",
+      "itemType" : "Armor",
+      "price" : "5 coins"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "464586ed-b889-5687-9acf-0957c3636491",
+    "name" : "Quilted Vest",
+    "slug" : "quilted-vest",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "availability" : "Common",
+      "itemType" : "Potion",
+      "price" : "5 coins",
+      "uses" : 3
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "a90e5d34-e9be-5103-b220-46e593737d96",
+    "name" : "Tonic Tea",
+    "slug" : "tonic-tea",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "availability" : "Common",
+      "gearType" : "Tool",
+      "itemType" : "AdventuringGear",
+      "price" : "5 coins",
+      "uses" : 4
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "c89e1fe2-7b94-545d-90c4-a9e812f0c770",
+    "name" : "Oil Lantern",
+    "slug" : "oil-lantern",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "itemType" : "Relic",
+      "relic" : [
+        {
+          "name" : "Murmur",
+          "text" : "Example of a relic effect: display text."
+        }
+      ]
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "3eb53fd1-2f09-5a75-9db0-eee9551339de",
+    "name" : "Chatty Compass",
+    "slug" : "chatty-compass",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "columns" : [
+      {
+        "alignment" : "center",
+        "name" : "d6"
+      },
+      {
+        "alignment" : "left",
+        "name" : "Find"
+      }
+    ],
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "975dfd2d-155d-5b00-9972-00580539926b",
+    "name" : "Daily Finds",
+    "notes" : "",
+    "rows" : [
+      [
+        "1",
+        "A key without a lock."
+      ],
+      [
+        "2",
+        "A coat button."
+      ],
+      [
+        "3",
+        "A half-torn map."
+      ],
+      [
+        "4",
+        "A bent coin."
+      ],
+      [
+        "5",
+        "A blue feather."
+      ],
+      [
+        "6",
+        "Nothing at all."
+      ]
+    ],
+    "slug" : "daily-finds",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  }
+]

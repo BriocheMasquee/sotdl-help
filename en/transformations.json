@@ -1,0 +1,46 @@
+[
+  {
+    "data" : {
+      "attrs" : {
+        "AGI" : {
+          "value" : 1
+        },
+        "WIL" : {
+          "value" : -1
+        }
+      },
+      "corruption" : {
+        "mode" : "fixed",
+        "value" : 0
+      },
+      "eligibility" : "Example: a living character. Display text only: the sheet checks nothing.",
+      "health" : 2,
+      "insanity" : {
+        "dice" : "1d3",
+        "mode" : "variable"
+      },
+      "perception" : 1,
+      "tables" : "",
+      "talent" : [
+        {
+          "name" : "Pallor",
+          "text" : "Example of a transformation talent."
+        },
+        {
+          "name" : "Echo",
+          "text" : "Example of a talent with uses.",
+          "usesBase" : 1
+        }
+      ]
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "53dea0ea-616f-5e09-b0bd-9625d5b27fc0",
+    "name" : "Reflection",
+    "slug" : "reflection",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  }
+]

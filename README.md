@@ -6,13 +6,13 @@ Guides d'utilisation du système **Shadow of the Demon Lord** pour *Encounter+*.
 | Module | Language / Langue | Status / État |
 |---|---|---|
 | **Aide OSD** (`aide-osd`) | Français | Available / Disponible |
-| **Help SotDL** (`help-sotdl`) | English | Coming soon / À venir |
+| **Help SotDL** (`help-sotdl`) | English | Available / Disponible |
 
 ## Install / Installation
 
 - **From Encounter+ / Depuis Encounter+** : the modules are listed in the system's recommended content / les modules figurent dans les contenus recommandés du système.
 - **By hand / À la main** : download the `.module` file of the [latest release](../../releases/latest) and import it in Encounter+ / téléchargez le fichier `.module` de la [dernière release](../../releases/latest) et importez-le dans Encounter+.
-- **Players' PDF / PDF pour les joueurs** : `Aide_OSD_joueurs.pdf`, attached to each [release](../../releases/latest) / joint à chaque release.
+- **Players' PDF / PDF pour les joueurs** : `Aide_OSD_joueurs.pdf` (FR), `Help_SotDL_players.pdf` (EN), attached to each [release](../../releases/latest) / joints à chaque release.
 
 ## What they contain / Contenu
 
@@ -22,7 +22,7 @@ Le fonctionnement du système (feuille de personnage, création, montée de nive
 ## Layout / Organisation
 
 - `fr/` : source of the French module / source du module français.
-- `en/` : source of the English module (to come) / source du module anglais (à venir).
+- `en/` : source of the English module / source du module anglais.
 - `scripts/publier.py` : builds the `.module` files and manifests, and publishes a release / construit les modules et les manifestes et publie une release.
 
 ## Credits / Crédits

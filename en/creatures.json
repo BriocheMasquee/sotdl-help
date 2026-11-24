@@ -1,0 +1,96 @@
+[
+  {
+    "data" : {
+      "AGI" : 12,
+      "INT" : 6,
+      "STR" : 8,
+      "WIL" : 8,
+      "ac" : 12,
+      "cr" : 1,
+      "creatureAttacks" : [
+        {
+          "bonus" : 3,
+          "name" : "Bite",
+          "range" : "melee",
+          "text" : "([1d6](</roll/1d6[Damage]/Bite/damage>))"
+        },
+        {
+          "bonus" : 2,
+          "name" : "Dust throw",
+          "range" : "short",
+          "text" : "([1d3](</roll/1d3[Damage]/Dust throw/damage>))"
+        }
+      ],
+      "creatureDescriptors" : "Animal",
+      "creatureSpecialAttacks" : [
+        {
+          "name" : "Dust cloud",
+          "text" : "Example of a special attack: display text."
+        }
+      ],
+      "creatureTraits" : [
+        {
+          "name" : "Stealthy",
+          "text" : "Example of a trait: display text."
+        }
+      ],
+      "gabarit" : "g1_2",
+      "hp" : 12,
+      "perception" : 11,
+      "speed" : 10
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "0317ec80-e797-5a24-ad06-a17acaa2732d",
+    "name" : "Attic Prowler",
+    "slug" : "attic-prowler",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "AGI" : 9,
+      "INT" : 10,
+      "STR" : 12,
+      "WIL" : 10,
+      "ac" : 14,
+      "cr" : 2,
+      "creatureAttacks" : [
+        {
+          "bonus" : 4,
+          "name" : "Wooden fist",
+          "range" : "melee",
+          "text" : "([1d6+2](</roll/1d6[Damage]+2/Wooden fist/damage>))"
+        }
+      ],
+      "creatureDescriptors" : "Animated",
+      "creatureSpecialActions" : [
+        {
+          "name" : "Call for quiet",
+          "text" : "Example of a special action."
+        }
+      ],
+      "creatureTraits" : [
+        {
+          "name" : "Silent",
+          "text" : "Example of a trait."
+        }
+      ],
+      "gabarit" : "g1",
+      "hp" : 25,
+      "perception" : 10,
+      "speed" : 8
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "eb3e0e0d-cb00-51c7-8e7b-68a85b1d8c5f",
+    "name" : "Library Guardian",
+    "slug" : "library-guardian",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  }
+]

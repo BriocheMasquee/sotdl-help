@@ -1,0 +1,40 @@
+[
+  {
+    "data" : {
+      "AGI" : 10,
+      "INT" : 13,
+      "STR" : 9,
+      "WIL" : 11,
+      "ac" : 11,
+      "cr" : 0,
+      "creatureAttacks" : [
+        {
+          "bonus" : 1,
+          "name" : "Cane",
+          "range" : "melee",
+          "text" : "([1d3](</roll/1d3[Damage]/Cane/damage>))"
+        }
+      ],
+      "creatureDescriptors" : "Invented human",
+      "creatureTraits" : [
+        {
+          "name" : "Memory of the shelves",
+          "text" : "Example of an NPC trait: display text."
+        }
+      ],
+      "gabarit" : "g1",
+      "hp" : 10,
+      "perception" : 13,
+      "speed" : 10
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "78c9c5be-8be7-5711-aa35-294b9ef8b782",
+    "name" : "Archivist Mirelle",
+    "slug" : "archivist-mirelle",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  }
+]

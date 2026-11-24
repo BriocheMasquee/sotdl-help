@@ -1,0 +1,140 @@
+[
+  {
+    "data" : {
+      "spellDuration" : "Instant.",
+      "spellRank" : "0",
+      "spellTarget" : "A light object within short range.",
+      "spellTradition" : {
+        "tradition" : "Air"
+      },
+      "spellType" : "Utility"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "c6dd8960-4407-5525-b52d-ab83f71a05e0",
+    "name" : "Minute Breeze",
+    "slug" : "minute-breeze",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "spellDuration" : "1 min.",
+      "spellEffects" : [
+        {
+          "name" : "Effect",
+          "text" : "Example of effect text."
+        }
+      ],
+      "spellRank" : "1",
+      "spellTarget" : "A willing creature.",
+      "spellTradition" : {
+        "tradition" : "Air"
+      },
+      "spellType" : "Utility"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "a6696e00-52e3-59c4-91a0-00ce48dc870d",
+    "name" : "Updraft",
+    "slug" : "updraft",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "spellDuration" : "Instant.",
+      "spellEffects" : [
+        {
+          "name" : "Effect",
+          "text" : "Example of an attack: damage roll [1d6](</roll/1d6[Damage]/Gust/damage>)."
+        }
+      ],
+      "spellRank" : "1",
+      "spellTarget" : "A creature within medium range.",
+      "spellTradition" : {
+        "tradition" : "Air"
+      },
+      "spellType" : "Attack"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "575d41dd-631b-5022-8a68-ef316534fcef",
+    "name" : "Pocket Gust",
+    "slug" : "pocket-gust",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "spellDuration" : "1 min.",
+      "spellRank" : "1",
+      "spellTarget" : "An area within short range.",
+      "spellTradition" : {
+        "tradition" : "Air"
+      },
+      "spellType" : "Utility"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "9de2bab3-dec0-583b-b9ad-f4f57fc027c4",
+    "name" : "Mist Veil",
+    "slug" : "mist-veil",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "spellDuration" : "Instant.",
+      "spellRank" : "0",
+      "spellTarget" : "A light object within short range.",
+      "spellTradition" : {
+        "tradition" : "Earth"
+      },
+      "spellType" : "Utility"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "a9722541-8c33-5163-9686-61fb313b5fb0",
+    "name" : "Faithful Dust",
+    "slug" : "faithful-dust",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "spellDuration" : "1 min.",
+      "spellEffects" : [
+        {
+          "name" : "Effect",
+          "text" : "Example of effect text."
+        }
+      ],
+      "spellRank" : "1",
+      "spellTarget" : "A point within medium range.",
+      "spellTradition" : {
+        "tradition" : "Earth"
+      },
+      "spellType" : "Utility"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "94b49330-d8aa-557a-92d8-82ceb24ccf57",
+    "name" : "Gravel Wall",
+    "slug" : "gravel-wall",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  }
+]

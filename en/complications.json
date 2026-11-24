@@ -1,0 +1,26 @@
+[
+  {
+    "data" : {
+      "tables" : "",
+      "trait" : [
+        {
+          "name" : "Head in the clouds",
+          "text" : "Example of a trait: display text."
+        },
+        {
+          "name" : "Catching up",
+          "text" : "Example of a second trait; the player can note a choice there."
+        }
+      ]
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "1613d2aa-ad5d-53a2-8bd5-04f2d4487711",
+    "name" : "Absent-minded",
+    "slug" : "absent-minded",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  }
+]

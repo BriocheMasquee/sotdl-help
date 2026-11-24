@@ -1,0 +1,74 @@
+[
+  {
+    "data" : {
+      "AGI" : 11,
+      "INT" : 10,
+      "STR" : 9,
+      "WIL" : 10,
+      "ancestryLevel4" : {
+        "choice" : [
+          {
+            "name" : "Bright glow",
+            "text" : "Example of a level choice, with a counter.",
+            "usesBase" : 1
+          },
+          {
+            "name" : "Scent of danger",
+            "text" : "Example of a second choice, without a counter."
+          }
+        ],
+        "gains" : {
+          "health" : 4
+        },
+        "levelChoicePick" : 1,
+        "levelTalent" : true,
+        "options" : "Choose one of the two talents."
+      },
+      "corruption" : {
+        "mode" : "fixed",
+        "value" : 0
+      },
+      "health" : {
+        "attribute" : "STR",
+        "bonus" : 0
+      },
+      "insanity" : {
+        "mode" : "fixed",
+        "value" : 0
+      },
+      "languagesProfessions" : "You speak [Murmurish](rule).",
+      "perception" : 1,
+      "size" : "g1",
+      "speed" : 10,
+      "startLanguages" : [
+        {
+          "name" : "Murmurish",
+          "reference" : "/rule/murmurish",
+          "spoken" : true
+        }
+      ],
+      "startMode" : "fixed",
+      "tables" : "",
+      "talent" : [
+        {
+          "name" : "Soft glow",
+          "text" : "Example: a small light you can switch on or off. This talent has two uses.",
+          "usesBase" : 2
+        },
+        {
+          "name" : "Muffled steps",
+          "text" : "Example of a talent without a counter: it is displayed, nothing more."
+        }
+      ]
+    },
+    "descr" : "People invented for the Help SotDL screenshots. The values are arbitrary.",
+    "id" : "f71623b4-35ab-5a77-82a1-96541b9b25ea",
+    "name" : "Glimmerkin",
+    "slug" : "glimmerkin",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  }
+]

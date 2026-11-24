@@ -1,0 +1,345 @@
+/* Thème SotDL pour les pages de module : GÉNÉRÉ par sotdl-contenu/outils/generer-page-css.py (ne pas modifier ici).
+   Base commune = copie de systems/sotdl/styles/default.css ; règles propres aux pages = outils/page-specifique.css. */
+
+/* === BASE COMMUNE (copie de default.css) === */
+@font-face { font-family: 'Athelas'; src: url('../fonts/Athelas-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Athelas'; src: url('../fonts/Athelas-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Athelas'; src: url('../fonts/Athelas-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Athelas'; src: url('../fonts/Athelas-BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic; }
+@font-face { font-family: 'Montserrat'; src: url('../fonts/Montserrat-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Montserrat'; src: url('../fonts/Montserrat-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; }
+@font-face { font-family: 'Montserrat'; src: url('../fonts/Montserrat-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; }
+@font-face { font-family: 'Montserrat'; src: url('../fonts/Montserrat-BoldItalic.ttf') format('truetype'); font-weight: 700; font-style: italic; }
+@font-face { font-family: 'Aquifer'; src: url('../fonts/Aquifer.ttf') format('truetype'); font-weight: 400; font-style: normal; }
+
+/* ---------- Jetons ---------- */
+:root {
+  color-scheme: light;
+
+  --font-body: 'Athelas', ui-serif, Georgia, serif;
+  --font-ui: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-title: 'Aquifer', 'Athelas', ui-serif, serif;
+
+  --color-text: #222222;
+  --color-note: #666666;
+  --color-app-note: #2F5D7C; /* indications propres à l'application (pas des textes du livre) */
+  --color-accent: #980C14;
+  --color-on-accent: #ffffff;
+  --color-rule: #980C14;
+  --color-paper: #E0E4E8;
+  --color-root: #E0E4E8; /* sous la page, suit l'interface : gris en clair, noir en sombre (voir plus bas) */
+  --color-black: #000000;
+  --color-band-grey: #B2B2B2;
+  --color-frame: color-mix(in srgb, var(--color-rule) 45%, transparent); /* cadre léger : blocs « Créer… », pastilles, blocs de statistiques */
+  --color-table-head: var(--color-black);
+  --color-table-stripe: rgba(0, 0, 0, 0.05);
+  --color-table-veil: rgba(255, 255, 255, 0.55); /* voile clair des lignes impaires */
+  --paper-image: url('../images/sotdl_paper.png');
+
+  --page-gutter: 1.25rem;
+  --page-max-width: 60rem;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Suit la taille de texte de l'utilisateur : l'application pose --font-scale sur <html> */
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: calc(100% * var(--font-scale, 1));
+  background-color: var(--color-root);
+}
+
+body, h1, h2, h3, h4, p, figure, dl, dd, ul, ol { margin-block: 0; }
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  /* La couleur du corps reste transparente : l'application peint la zone sous la barre de navigation avec la
+     couleur de <html> (gris ou noir selon l'interface). Le papier est donc posé en couches d'image */
+  background-color: transparent;
+  background-image: var(--paper-image), linear-gradient(var(--color-paper), var(--color-paper));
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+main { padding: var(--page-gutter) var(--page-gutter) 2rem; max-width: var(--page-max-width); margin-inline: auto; }
+
+img, picture { max-width: 100%; height: auto; display: block; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --color-root: #1c1c1e; }
+}
+/* === FIN DE LA BASE COMMUNE === */
+
+/* ---------- Pages de module : règles propres aux pages (thème du système SotDL) ----------
+   Les pages n'ont pas le conteneur `.description` des fiches : ses règles de Markdown (titres H1-H4, listes, liens, tableaux,
+   citations) sont reprises ici sur `main` (le contenu d'une page est dans `body > main`).
+   Valeurs hérités de default.css (décidés) : titres, listes, liens, tableaux. Valeurs PROPOSÉES (à valider) : citation, encart, texte à lire,
+   liste de définitions, surlignage, notes de bas de page, `.center`. */
+
+/* ---------- Texte ---------- */
+main { --h1-size: 1.95rem; --h2-size: 1.3rem; --h3-size: 1.05rem; --h4-size: 0.9rem; --h6-size: 0.9rem; text-align: justify; hyphens: manual; }
+main p { margin-block-end: 0.6rem; text-indent: 1.2em; }
+/* Pas de retrait juste après un titre, en tête de page, ni dans une liste, une citation, une définition ou une note. Le titre d'un tableau (H6) précède le
+   tableau : le paragraphe qui suit un tableau garde donc son retrait */
+main :is(h1, h2, h3, h4, h5, h6) + p, main :is(h1, h2, h3, h4, h5, h6) + .annotation + p, main > p:first-child, main li > p, main dd p, .footnotes p { text-indent: 0; }
+/* Règle SotDL (2026-11-24) : pas de retrait de première ligne après un titre NI après une table, une liste, un bloc ou un trait */
+main :is(table, ul, ol, pre, hr, div, section) + p { text-indent: 0; }
+/* Deux colonnes « écriture | rendu » (page Écrire en Markdown) : ::::: duo, ::::  duo-code, ::::  duo-rendu */
+main .duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.9rem; margin: 0.3rem 0 0.9rem; align-items: start; }
+main .duo > div { min-width: 0; }
+/* Bloc de code : un seul encadré (et non une pastille par ligne) */
+main pre { margin: 0 0 0.4rem; padding: 0.5rem 0.7rem; background: #e1e8ee; border: 1px dashed color-mix(in srgb, var(--hx-note) 60%, transparent); border-radius: 3px 8px 3px 8px; overflow-x: auto; text-indent: 0; }
+main pre code { display: block; padding: 0; background: none; border: 0; border-radius: 0; white-space: pre; font-size: 0.8rem; line-height: 1.5; }
+main .duo pre { margin: 0; }
+main .duo-rendu { padding-inline-start: 0.8rem; border-inline-start: 1px solid var(--color-accent); }
+main .duo-rendu > :first-child { margin-top: 0; }
+@media (max-width: 640px) { main .duo { grid-template-columns: 1fr; } main .duo-rendu { padding-inline-start: 0; border-inline-start: 0; } }
+main strong { color: inherit; }
+main strong.lead { color: var(--color-accent); } /* gras en tête de paragraphe ou de puce (classe posée par scripts/custom.js) */
+main .champs strong, main .champs strong.lead { color: inherit; }  /* noms de champs en gras noir dans un bloc `::: champs` (2026-11-22, choix de Pierre ; identique au système) */
+
+/* ---------- Titres (H1 à H6) ---------- */
+main h1, main h2, main h3, main h4, main h5, main h6 { text-align: left; text-wrap: balance; break-after: avoid; }
+main h1, main h2, main h3 { font-family: var(--font-title); font-weight: 400; line-height: 1.1; text-transform: uppercase; }
+main h1 { margin-block: 1.6rem 0.6rem; font-size: var(--h1-size); color: var(--color-accent); }
+main h2 { margin-block: 1.4rem 0.5rem; font-size: var(--h2-size); color: var(--color-accent); }  /* sans filet (2026-11-07, choix de l'utilisateur) */
+main h3 { margin-block: 1.75rem 0.4rem; padding-block-end: 0.08rem; font-size: var(--h3-size); text-align: center; color: var(--color-accent); border-block-end: 1px solid var(--color-black); }
+main h4, main h5 { margin-block: 1rem 0.3rem; font-family: var(--font-ui); font-size: var(--h4-size); font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; line-height: 1.25; color: var(--color-black); }
+/* H6 = titre d'un tableau : dessin du PDF (comme le H1, Aquifer rouge en capitales), à la taille d'un petit titre, aligné à gauche */
+main h6 { margin-block: 1.1rem 0.35rem; font-family: var(--font-title); font-size: var(--h6-size); font-weight: 400; line-height: 1.1; letter-spacing: 0; text-align: left; text-transform: uppercase; color: var(--color-accent); }
+main > :first-child:is(h1, h2, h3, h4, h5, h6) { margin-block-start: 0.6rem; }
+
+/* ---------- Listes ---------- */
+main ul, main ol { margin-block: 0 0.6rem; padding-inline-start: 1.3rem; text-align: left; }
+main li { margin-block: 0; padding-inline-start: 0.1rem; line-height: 1.3; }
+main li > p { margin: 0; text-indent: 0; }
+main li > :is(ul, ol) { margin-block: 0.1rem 0; }
+main p + :is(ul, ol) { margin-block-start: -0.2rem; }
+
+/* ---------- Liens ---------- */
+a[href^="/roll/"] { color: inherit; white-space: nowrap; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+main a:not([href^="/roll/"]):not([href^="/table-roll/"]) {
+  color: color-mix(in srgb, var(--color-accent) 85%, black); font-style: normal; font-weight: 400;
+  text-decoration: underline dotted; text-decoration-thickness: 1px; text-underline-offset: 0.15em;
+}
+/* Bouton de lancer d'une table (« [Lancer](/table-roll/slug) ») : même pastille que sur les fiches */
+main a[href^="/table-roll/"] {
+  display: inline-block; padding: 0.08rem 0.55rem; font-family: var(--font-ui); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase;
+  white-space: nowrap; text-decoration: none; color: var(--color-accent); border: 1px solid var(--color-frame); border-radius: 999px;
+  background: color-mix(in srgb, var(--color-table-veil) 55%, transparent);
+}
+
+/* ---------- Tableaux : en-tête noir, puis une ligne transparente, une ligne blanche (voile), en alternance, comme dans les PDF ;
+   lignes un peu moins hautes que dans les fiches. L'alignement vient du Markdown `:---:` ---------- */
+main table { width: 100%; margin-block: 0.25rem 0.75rem; border-collapse: collapse; background: transparent; font-family: var(--font-ui); font-size: 0.86rem; line-height: 1.4; text-align: left; hyphens: manual; }
+main th { background: var(--color-table-head); color: var(--color-on-accent); padding: 0.2rem 0.5rem; font-weight: 700; }
+main td { padding: 0.14rem 0.5rem; vertical-align: top; background: transparent; }
+main tbody tr:nth-child(even) td { background: var(--color-table-veil); }
+main th[align="center"], main td[align="center"] { text-align: center; }
+main th[align="right"], main td[align="right"] { text-align: right; }
+main th a:not([href^="/roll/"]) { color: inherit; }
+
+/* ---------- À valider : citation, encart, texte à lire, définitions, surlignage, notes, images ---------- */
+/* ---------- Encadré « parchemin » (blockquote `>` des pages, 2026-11-08 : style du livre — Fabriquer des équipements, Inventions, Mélanger des potions) ----------
+   Balisage : `> #### Titre` (titre rouge centré, souligné) puis paragraphes, puces, tableau ; fond parchemin, bords irréguliers (clip-path), texte justifié.
+   Couleurs fixes (le parchemin ne change pas avec le thème sombre). */
+main :is(blockquote, .annotation) { margin: 1.1rem 0 1.3rem; padding: 0.8rem 1.15rem 0.7rem; font-family: var(--font-ui); font-size: 0.8rem; font-style: normal; line-height: 1.45; text-align: justify; hyphens: manual; color: #2a1c0d;
+  background: radial-gradient(ellipse at 18% 12%, #f4d98f 0%, #ebc46f 50%, #dca94c 100%); border: 0; border-radius: 0; box-shadow: inset 0 0 0.45rem 0.08rem rgba(78, 40, 6, 0.9), inset 0 0 1.7rem rgba(110, 62, 12, 0.6);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 5px, #000 calc(100% - 5px), transparent), linear-gradient(to bottom, transparent, #000 5px, #000 calc(100% - 5px), transparent); -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent, #000 5px, #000 calc(100% - 5px), transparent), linear-gradient(to bottom, transparent, #000 5px, #000 calc(100% - 5px), transparent); mask-composite: intersect;
+  clip-path: polygon(0% 0.36%, 6.86% 0.72%, 13.94% 0.59%, 21.32% 0.06%, 28.58% 0.04%, 35.66% 0.08%, 42.53% 0.47%, 50.26% 0.14%, 56.92% 0.69%, 64.64% 0.63%, 71.35% 1.07%, 78.21% 0.94%, 85.55% 0.16%, 92.55% 0.34%, 100% 0.9%, 99.84% 12.5%, 99.48% 25.0%, 99.42% 37.5%, 99.66% 50.0%, 99.51% 62.5%, 99.94% 75.0%, 99.95% 87.5%, 100% 99.77%, 93.0% 99.53%, 85.57% 99.36%, 78.53% 99.67%, 71.66% 99.23%, 64.08% 99.37%, 57.16% 99.04%, 50.18% 99.68%, 43.24% 99.87%, 35.65% 99.17%, 28.29% 99.46%, 21.06% 99.26%, 14.5% 99.37%, 7.44% 99.65%, 0% 99.24%, 0.53% 87.5%, 0.52% 75.0%, 0.41% 62.5%, 0.76% 50.0%, 0.85% 37.5%, 0.43% 25.0%, 0.6% 12.5%); }
+main blockquote > :first-child { margin-block-start: 0; }
+main blockquote > :last-child { margin-block-end: 0; }
+main blockquote h4 { margin: 0 0 0.45rem; padding: 0; border: 0; text-align: center; font-family: var(--font-title); font-size: 0.98rem; font-weight: 400; letter-spacing: 0.01em; line-height: 1.2; text-transform: uppercase; color: #7a1a12; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+main blockquote p { margin: 0 0 0.3rem; text-indent: 1.2em; }
+main blockquote h4 + p, main blockquote p:first-child { text-indent: 1.2em; }
+main blockquote ul { margin: 0.1rem 0 0.2rem; padding-inline-start: 1.15rem; text-align: justify; }
+main blockquote li { margin-block: 0 0.15rem; line-height: 1.4; }
+main blockquote strong { color: inherit; }
+main blockquote a { color: #7a1a12; }
+main blockquote h6 { margin: 0.7rem 0 0.35rem; color: #7a1a12; }
+main blockquote table { margin-block: 0.2rem 0.3rem; }
+main blockquote td { background: transparent; }
+main blockquote tbody tr:nth-child(even) td { background: rgba(255, 255, 255, 0.6); }   /* alternance : 1ʳᵉ ligne transparente, 2ᵉ blanche (comme les tables) */
+main blockquote strong.lead { color: inherit; }
+main code { padding: 0 0.3em; font-family: var(--font-ui); font-size: 0.82em; font-style: italic; color: var(--color-app-note); background: color-mix(in srgb, var(--color-app-note) 9%, transparent); border-radius: 3px; }
+main .sidebar { margin-block: 0.9rem; padding: 0 0.8rem 0.5rem; background: color-mix(in srgb, var(--color-table-veil) 55%, transparent); border: 1px solid var(--color-frame); border-radius: 3px; }
+main .sidebar > :first-child:is(h1, h2, h3, h4, h5, h6) { margin-block-start: 0.6rem; }
+main .read { margin-block: 0.7rem; padding-inline-start: 0.8rem; font-style: italic; border-inline-start: 3px solid var(--color-accent); }
+main .note { margin-block: 0.35rem; padding: 0.35rem 0.6rem; font-family: var(--font-ui); font-size: 0.78rem; font-style: italic; color: var(--color-app-note); background: color-mix(in srgb, var(--color-app-note) 9%, transparent); border-inline-start: 3px solid var(--color-app-note); border-radius: 0 4px 4px 0; }
+main hr { margin-block: 1rem; border: 0; border-block-start: 1px solid var(--color-rule); }
+main dl { margin-block: 0 0.6rem; text-align: left; }
+main dt { font-family: var(--font-ui); font-size: 0.86rem; font-weight: 700; }
+main dd { margin: 0 0 0.3rem 1.2rem; }
+main mark { padding: 0 0.15em; color: inherit; background: color-mix(in srgb, var(--color-accent) 18%, transparent); }
+img.center, .center img { margin-inline: auto; }
+.footnotes, section.footnotes { margin: 0; padding: 0; font-family: var(--font-ui); font-size: 0.7rem; line-height: 1.35; color: var(--color-note); text-align: left; }
+hr.footnotes-sep, .footnotes hr { height: 0; margin-block: 1.4rem 0.25rem; background: none; border: 0; border-block-start: 1px solid var(--color-rule); }
+.footnotes ol { margin: 0; padding-inline-start: 1.1rem; }
+.footnotes li { line-height: 1.35; }
+.footnote-ref a, a.footnote-ref { text-decoration: none; color: var(--color-accent); }
+
+/* ---------- Bloc de statistiques dans une page (véhicule, créature) : même identité que `.statblock` des fiches, sans cadre rouge ----------
+   Balisage Markdown : `::: {.statblock}` ; `#### NOM <span class="prix">PRIX 5 CO</span>` (bandeau noir) ; un paragraphe en italique (bandeau rouge) ;
+   lignes `**Libellé** valeur` ; `##### SECTION` (bande grise). Côtés : noirs autour du bandeau noir et de la partie voilée, rouges autour du bandeau rouge. */
+main .statblock { margin-block: 0.9rem; text-align: justify; hyphens: manual; }
+main .statblock > h4 { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; column-gap: 0.7rem; margin: 0; padding: 0.3rem 0.6rem 0.22rem; border: 1px solid var(--color-black); background: var(--color-black); color: var(--color-on-accent); font-family: var(--font-body); font-size: 0.96rem; font-weight: 700; letter-spacing: 0; line-height: 1.15; text-transform: uppercase; }
+main .statblock h4 .prix { margin-inline-start: auto; font-size: 0.78rem; font-variant-caps: all-small-caps; letter-spacing: 0.04em; white-space: nowrap; }
+main .statblock > h4 + p { margin: 0; padding: 0.14rem 0.6rem; border-inline: 1px solid var(--color-accent); background: var(--color-accent); color: var(--color-on-accent); font-family: var(--font-body); font-size: 0.86rem; font-style: italic; line-height: 1.3; text-indent: 0; }
+main .statblock > p:not(h4 + p) { margin: 0; padding: 0.06rem 0.8rem 0.06rem calc(0.8rem + 1em); border-inline: 1px solid var(--color-black); background: color-mix(in srgb, var(--color-table-veil) 55%, transparent); font-family: var(--font-ui); font-size: 0.8rem; line-height: 1.38; text-indent: -1em; }
+main .statblock > h4 + p + p { padding-block-start: 0.45rem; }
+main .statblock strong { font-weight: 700; color: inherit; }
+main .statblock > h5 { margin: 0; padding: calc(0.3rem + 0.16rem) 0.6rem; border-inline: 1px solid var(--color-black); background-color: color-mix(in srgb, var(--color-table-veil) 55%, transparent); background-image: linear-gradient(var(--color-band-grey), var(--color-band-grey)); background-repeat: no-repeat; background-position: 0 50%; background-size: 100% calc(100% - 0.6rem); color: var(--color-black); font-family: var(--font-ui); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; line-height: 1.25; text-transform: uppercase; }
+main .statblock > h5 + p { padding-block-start: 0.1rem; }
+main .statblock > :last-child { padding-block-end: 0.5rem; border-block-end: 1px solid var(--color-black); }
+
+/* ---------- Image de couverture : pleine largeur, du bord à bord de la page (`{.size-cover}`, comme le thème par défaut d'E+) ---------- */
+img.size-cover, figure.size-cover { max-width: none; width: calc(100% + 2 * var(--page-gutter)); height: auto; margin-inline: calc(-1 * var(--page-gutter)); margin-block-end: var(--page-gutter); }
+main > .size-cover:first-child, main > p:first-child > img.size-cover:first-child, main > p:first-child > a:first-child > img.size-cover:first-child { margin-block-start: calc(-1 * var(--page-gutter)); }
+main a.image-link { display: block; }
+
+/* ---------- Texte de règles (police sans empattement du livre : traits, « Créer un… », « Expert… ») : bloc ::: {.regles} (csd1, 2026-11-07) ---------- */
+main .regles { margin-block: 0.3rem 0.8rem; font-family: var(--font-ui); font-size: 0.86rem; line-height: 1.52; text-align: justify; hyphens: manual; }  /* comme `.line` du système */
+main .regles p { margin-block: 0 0.28rem; padding-inline-start: 1.1em; text-indent: -1.1em; }   /* retrait suspendu comme `.line` du système (2026-11-08) */
+main .regles p.suite { padding-inline-start: 0; text-indent: 1.2em; }   /* paragraphes suivants d'un même trait : retrait de 1ʳᵉ ligne (`.line > p + p` du système) */
+main .regles strong { color: inherit; }
+main .regles strong.lead { color: inherit; } /* noms de traits en noir dans le livre */
+
+/* ---------- Dés : même cartouche voilé que les pastilles de type / bouton de lancer du système (`.entity-kind`), texte en minuscules (2026-11-07) ---------- */
+main a[href^="/roll/"] {
+  padding: 0.04em 0.5em; font-family: var(--font-ui); font-size: 0.78em; letter-spacing: 0.04em; white-space: nowrap; text-decoration: none;
+  color: var(--color-accent); background: var(--color-table-veil); border: 1px solid var(--color-frame); border-radius: 999px;
+}
+/* Titre de tableau de lancer : le bouton « Lancer XdY » est dans le titre, sur la même ligne, aligné à droite */
+main h6:has(a[href^="/table-roll/"]) { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+main h6 a[href^="/table-roll/"] { flex: none; margin-inline-start: auto; }
+/* Dé dans un en-tête de tableau (fond noir) : pas de cartouche, lien blanc gras non souligné (2026-11-07, choix de l'utilisateur) */
+main th a[href^="/roll/"] { padding: 0; font-family: inherit; font-size: inherit; font-weight: 700; letter-spacing: inherit; color: var(--color-on-accent); background: none; border: 0; border-radius: 0; text-decoration: none; }
+
+/* ---------- Cadre des valeurs de départ et des caractéristiques de niveau : même cartouche que `.create` / `.level-stats` du système (2026-11-07, choix de l'utilisateur).
+   Balisage : `::: {.regles .cadre}` ; le bloc `::: {.regles}` qui suit (langues, traits) reste hors cadre */
+main .regles.cadre { margin-block: 0.5rem 0.75rem; padding: 0.45rem 0.8rem 0.3rem; background: color-mix(in srgb, var(--color-table-veil) 55%, transparent); border: 1px solid var(--color-frame); border-radius: 3px; }
+main .regles.cadre > :last-child { margin-block-end: 0; }
+main .regles.cadre + .regles { margin-block-start: 0.7rem; }
+
+/* ---------- Bloc de sort dans une page (voies de csd1, 2026-11-08 : présentation de la fiche du système, validée par l'utilisateur) ----------
+   Balisage : `:::: {.sort}` ; `#### NOM <span class="rang">Gardien attaque 1</span>` (titre rouge Aquifer, filet rouge dessous, tradition en pastille comme `.entity-kind`) ;
+   `::: {.regles .cadre}` imbriqué (Condition / Zone d'effet / Durée, comme le cartouche `.create` de la fiche) ; corps justifié, retrait de 1ʳᵉ ligne à partir du 2ᵉ paragraphe. */
+main .sort { margin-block: 1.7rem 0.9rem; text-align: justify; hyphens: manual; font-family: var(--font-ui); font-size: 0.86rem; line-height: 1.52; }
+main .sort > h4 { display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; column-gap: 0.7rem; margin: 0 0 0.4rem; padding: 0 0 0.3rem; border-block-end: 1px solid var(--color-accent); font-family: var(--font-title); font-size: 1.05rem; font-weight: 400; letter-spacing: 0; line-height: 1.15; text-transform: uppercase; color: var(--color-accent); text-align: left; }
+main .sort h4 .rang { flex: none; margin-inline-start: auto; padding: 0.08rem 0.55rem; font-family: var(--font-ui); font-size: 0.62rem; font-weight: 400; letter-spacing: 0.08em; white-space: nowrap; color: var(--color-accent); background: var(--color-table-veil); border: 1px solid var(--color-frame); border-radius: 999px; }
+main .sort > p { margin: 0 0 0.28rem; text-indent: 1.2em; }
+main p.lancer, main .sort > p.lancer { margin: 0.2rem 0 0.3rem; text-align: right; text-indent: 0; }   /* bouton « Lancer 1d6 » d'un tableau sans titre (sorts) */
+main .sort > .regles.cadre + p { text-indent: 0; }
+main .sort strong { color: inherit; }
+main .sort ul { margin-block: 0 0.28rem; padding-inline-start: 1.1rem; }
+main .sort li { line-height: 1.4; }
+
+/* ---------- Citation / accroche et annotation « En marge » (module d'aide, 2026-11-22, choix de Pierre : maquettes B et E) ----------
+   Balisage : `::: citation` (ou `::: accroche`, même style) : citation de module en général, centrée dans un cadre voilé entre deux filets rouges.
+   `::: annotation` : encadré parchemin (celui de `blockquote`) flottant à droite ; `::: {.annotation .gauche}` : flottant à gauche (on alterne à la main).
+   Sous 600 px de large, l'annotation reprend toute la largeur (pas de flottement). Le titre `**En marge.**` prend l'Aquifer rouge. */
+main :is(.citation, .accroche) { margin: 0.6rem 0 1.2rem; padding: 0.7rem 1rem; text-align: center; font-style: italic; background: color-mix(in srgb, var(--color-table-veil) 55%, transparent); border-block: 1px solid var(--color-frame); }
+main :is(.citation, .accroche) p { margin: 0; text-indent: 0; }
+main .annotation { padding-block: 0.65rem 0.6rem; margin-block: 0.3rem 0.8rem; }
+main .annotation p { margin: 0; text-indent: 0; text-align: left; }
+main .annotation strong, main .annotation strong.lead { font-family: var(--font-title); font-weight: 400; text-transform: uppercase; letter-spacing: 0.01em; color: #7a1a12; }
+@media (min-width: 600px) {
+  main .annotation { float: right; width: 38%; margin-inline: 0.9rem calc(-0.6 * var(--page-gutter)); }   /* effet post-it : plus étroit, mordant un peu sur la marge de la page */
+  main .annotation.gauche { float: left; margin-inline: calc(-0.6 * var(--page-gutter)) 0.9rem; }
+}
+main :is(h1, h2, h3, h4, h5, h6) { clear: both; }
+
+/* === HARMONISATION GRIMOIRE — PAGES DE MODULE (début) ============================================================
+   Version « pages » du bloc d'harmonisation du système (sotdl-system/outils/harmonisation-style/harmonisation.css, mêmes jetons --hx-*).
+   Ajouté APRÈS page-specifique.css par generer-page-css.py. Ne touche PAS : les blocs de statistiques (.statblock), l'encadré parchemin du livre (blockquote),
+   les images. Retour à l'état précédent : générer avec l'option --sans-harmonisation. */
+:root {
+  --hx-ink: #17120f; --hx-blood: #8e0e14; --hx-blood2: #b3151e; --hx-bone: #efe8d8; --hx-dot: #7a6f60;
+  --hx-page: #d9dde3; --hx-vignette: #1c26361f; --hx-parch-a: #f2ecdc; --hx-parch-b: #e9e1cc;
+  --hx-note: #3f6a8f; --hx-note-dark: #1f3c58;
+}
+/* ---- 1. Fond gris et vignette ---- */
+body {
+  background-color: transparent;
+  background-image: radial-gradient(ellipse at 50% 35%, transparent 52%, var(--hx-vignette) 100%), var(--paper-image), linear-gradient(var(--hx-page), var(--hx-page));
+  background-repeat: no-repeat, repeat, no-repeat; background-position: center, 0 0, 0 0; background-size: 100% 100%, auto, auto;
+}
+/* ---- 2. Pastilles : bouton de lancer de table, étiquette de sort ; dés (noir, rouge pour d20 / attaque / test) ---- */
+main a[href^="/table-roll/"], main .sort h4 .rang {
+  border: 0; background: var(--hx-ink); color: var(--hx-bone); border-radius: 3px 11px 3px 11px; padding: 0.2rem 0.8rem;
+  font-size: 0.62rem; line-height: 1.2; letter-spacing: 0.07em; box-shadow: 0 1px 0 #0008;
+}
+main a[href^="/table-roll/"]:active { background: var(--hx-blood2); }
+main a[href^="/roll/"] {
+  border: 0; background: linear-gradient(180deg, #2c231d, #0f0a08); color: var(--hx-bone); border-radius: 5px 5px 11px 11px;
+  padding: 0.08em 0.6em 0.14em; font-weight: 700; letter-spacing: 0.03em; box-shadow: 0 1px 0 #000a, inset 0 1px 0 #ffffff22;
+}
+main :is(a[href^="/roll/d20"], a[href^="/roll/D20"], a[href$="/attack"]) {
+  background: linear-gradient(180deg, var(--hx-blood2), var(--hx-blood)); box-shadow: 0 1px 0 #000a, inset 0 1px 0 #ff9a9a55;
+}
+main th a[href^="/roll/"] { padding: 0; background: none; border: 0; border-radius: 0; box-shadow: none; color: var(--color-on-accent); } /* en-tête noir : lien blanc, sans pastille */
+main .statblock a[href^="/roll/"] { font-size: 0.9em; }
+/* ---- 3. Filets et lignes : double filet (noir + rouge fin) sous H2 (H1 sans filet), filet à losange sous H3, pointillés, losange sur les séparateurs ---- */
+main h1 { border-block-end: 0; }   /* H1 sans filet (2026-11-22, choix de Pierre : tous les H1, système et modules) */
+main h2, main h3 { position: relative; padding-block-end: 0.5rem; border-block-end: 0; }   /* H3 : filet interrompu par un losange (2026-11-23, choix de Pierre) */
+main h2::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px;
+  background: linear-gradient(var(--hx-ink), var(--hx-ink)) 0 0 / 100% 2px no-repeat, linear-gradient(var(--hx-blood), var(--hx-blood)) 0 4px / 100% 1px no-repeat; }
+main h3::before { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: linear-gradient(90deg, var(--hx-ink) calc(50% - 14px), transparent calc(50% - 14px), transparent calc(50% + 14px), var(--hx-ink) calc(50% + 14px)); }
+main h3::after { content: '◆'; position: absolute; left: 50%; bottom: -5px; transform: translateX(-50%); font-size: 9px; line-height: 1; letter-spacing: 0; color: var(--hx-blood); font-family: var(--font-ui); font-variant-caps: normal; }
+main :is(blockquote, .statblock, .sort, .regles, .sidebar) :is(h1, h2, h3)::before, main :is(blockquote, .statblock, .sort, .regles, .sidebar) :is(h1, h2, h3)::after { display: none; }
+main hr { border: 0; height: 14px; margin-block: 1.2rem; position: relative; background: none; }
+main hr::before { content: '◆'; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: var(--hx-blood); font-size: 11px; line-height: 1; }
+main hr::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; border-top: 1.5px dotted var(--hx-dot);
+  -webkit-mask: linear-gradient(90deg, #000 calc(50% - 14px), transparent calc(50% - 14px), transparent calc(50% + 14px), #000 calc(50% + 14px));
+  mask: linear-gradient(90deg, #000 calc(50% - 14px), transparent calc(50% - 14px), transparent calc(50% + 14px), #000 calc(50% + 14px)); }
+main td { border-bottom: 1px dotted var(--hx-dot); }
+main th { border-bottom: 2px solid var(--hx-blood); }
+main tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--hx-parch-a) 70%, transparent); }
+main li:not(blockquote li):not(.footnotes li) { border-bottom: 1px dotted color-mix(in srgb, var(--hx-dot) 35%, transparent); padding-block: 0.05rem; }
+main li > :is(ul, ol) { border-top: 1px dotted color-mix(in srgb, var(--hx-dot) 35%, transparent); margin-block-start: 0.15rem; }
+.footnotes, hr.footnotes-sep, .footnotes hr { position: relative; }
+/* ---- 4. Cadres parchemin : valeurs de départ / caractéristiques (.regles.cadre), encart latéral, bloc de sort ---- */
+main .regles.cadre, main .sidebar {
+  background: linear-gradient(180deg, var(--hx-parch-a), var(--hx-parch-b)); border-color: color-mix(in srgb, var(--hx-blood) 65%, transparent);
+  box-shadow: 0 3px 8px #0003, inset 0 0 0 2px #fff8;
+}
+main .sort > h4 { border-block-end: 0; position: relative; padding-block-end: 0.4rem; }
+main .sort > h4::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 5px;
+  background: linear-gradient(var(--hx-ink), var(--hx-ink)) 0 0 / 100% 2px no-repeat, linear-gradient(var(--hx-blood), var(--hx-blood)) 0 4px / 100% 1px no-repeat; }
+main .sort > h4 { margin-block-end: 0.55rem; }
+::selection { background: color-mix(in srgb, var(--hx-blood) 28%, transparent); }
+/* ---- 5. Note de l'application (bleu) : `.note` et code en ligne, comme `.app-note` du système ---- */
+main .note {
+  position: relative; padding: 0.4rem 0.8rem 0.4rem 1.7rem; border: 1.5px dashed color-mix(in srgb, var(--hx-note) 70%, transparent);
+  border-radius: 3px 11px 3px 11px; color: var(--hx-note-dark); font-style: normal; background: linear-gradient(180deg, #eef3f7, #e1e8ee); box-shadow: inset 0 0 0 2px #fff8;
+}
+main .note::before { content: ''; position: absolute; left: 0.6rem; top: 0.62rem; width: 0.62rem; height: 0.62rem; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffffffd0, var(--hx-note) 58%, var(--hx-note-dark)); box-shadow: 0 0 0 1.5px var(--hx-note-dark); }
+main code { background: #e1e8ee; border: 1px dashed color-mix(in srgb, var(--hx-note) 60%, transparent); border-radius: 3px 8px 3px 8px; color: var(--hx-note-dark); padding: 0 0.4em; font-style: normal; }
+/* Liens vers une page du module (adresse relative « slug » ou « slug#ancre », 2026-11-24) : même pastille que /module/ (brun-gris) */
+/* ---- 6. Liens colorés (pastille CLAIRE, taille S, 2026-11-22) : règles / tables / modules par l'adresse ; créatures, objets, sorts, autres entités par classe lk-… ; version sombre précédente : sauvegardes/2026-11-22_compendium_avant-retouches-1/page-harmonisation.css ---- */
+main :is(a[href^="/rule/"], a[href^="/table/"], a[href^="/module/"], :where(a[href]:not([href^="/"]):not([href^="#"]):not([href^="http"]):not([href^="mailto"]):not(.image-link):not(.footnote-ref)), a.lk-creature, a[href^="/creature/"], a[href^="/npc/"], a[href^="/vehicle/"], a.lk-item, a[href^="/item/"], a.lk-spell, a[href^="/spell/"], a.lk-entity, a[href^="/ancestry/"], a[href^="/path/"], a[href^="/transformation/"], a[href^="/complication/"]) {
+  --c1: #3f6a8f; --lt: #1f3c58;   /* c1 = teinte, lt = texte (foncé) ; fond = c1 très éclairci */
+  display: inline-block; padding: 0.04em 0.5em 0.06em 0.38em; text-indent: 0; vertical-align: 0.1em;   /* bloc en ligne (et non flex) : la ligne de base du texte de la pastille reste celle du texte voisin ; 0.1em = centrage sur la hauteur d'x */
+  border: 1px solid color-mix(in srgb, var(--c1) 60%, #fff); border-radius: 999px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--c1) 8%, #fff), color-mix(in srgb, var(--c1) 20%, #fff));
+  color: var(--lt) !important; font-family: var(--font-ui, inherit) !important; font-weight: 600 !important; font-size: 0.7em; line-height: 1.2; letter-spacing: 0;
+  text-decoration: none !important; white-space: nowrap;
+}
+main :is(a[href^="/rule/"], a[href^="/table/"], a[href^="/module/"], :where(a[href]:not([href^="/"]):not([href^="#"]):not([href^="http"]):not([href^="mailto"]):not(.image-link):not(.footnote-ref)), a.lk-creature, a[href^="/creature/"], a[href^="/npc/"], a[href^="/vehicle/"], a.lk-item, a[href^="/item/"], a.lk-spell, a[href^="/spell/"], a.lk-entity, a[href^="/ancestry/"], a[href^="/path/"], a[href^="/transformation/"], a[href^="/complication/"])::before {
+  content: ''; display: inline-block; width: 0.5em; height: 0.5em; margin-right: 0.3em; border-radius: 50%; vertical-align: 0.04em;
+  background: radial-gradient(circle at 35% 30%, #fffc, var(--c1) 62%, var(--lt));
+}
+main :is(a[href^="/module/"], :where(a[href]:not([href^="/"]):not([href^="#"]):not([href^="http"]):not([href^="mailto"]):not(.image-link):not(.footnote-ref))) { --c1: #4a4038; --lt: #17120f; }
+main :is(a.lk-creature, a[href^="/creature/"], a[href^="/npc/"], a[href^="/vehicle/"]) { --c1: #9c1a24; --lt: #5a0c12; }
+main :is(a.lk-item, a[href^="/item/"]) { --c1: #c39a2e; --lt: #5a4204; }
+main :is(a.lk-spell, a[href^="/spell/"]) { --c1: #5b3a8c; --lt: #2e1a52; }
+main :is(a.lk-entity, a[href^="/ancestry/"], a[href^="/path/"], a[href^="/transformation/"], a[href^="/complication/"]) { --c1: #2c7a62; --lt: #124236; }
+main th :is(a[href^="/rule/"], a[href^="/table/"], a[href^="/module/"], :where(a[href]:not([href^="/"]):not([href^="#"]):not([href^="http"]):not([href^="mailto"]):not(.image-link):not(.footnote-ref)), a.lk-creature, a[href^="/creature/"], a[href^="/npc/"], a[href^="/vehicle/"], a.lk-item, a[href^="/item/"], a.lk-spell, a[href^="/spell/"], a.lk-entity, a[href^="/ancestry/"], a[href^="/path/"], a[href^="/transformation/"], a[href^="/complication/"]) { font-size: 0.8em; }
+main img { max-width: 100%; height: auto; }   /* les captures suivent la largeur de la fenêtre (2026-11-24) */
+/* === HARMONISATION GRIMOIRE — PAGES DE MODULE (fin) === */

@@ -1,0 +1,222 @@
+[
+  {
+    "data" : {
+      "level1" : {
+        "data" : {
+          "attrs" : {
+            "custom" : "Increase two attributes by 1"
+          },
+          "gains" : {
+            "health" : 3
+          },
+          "levelAttrChoice" : 2,
+          "levelProf" : true
+        }
+      },
+      "level1Talent" : [
+        {
+          "name" : "Patter",
+          "text" : "Example of a talent with uses: maximum = 1 + character level.",
+          "usesBase" : 1,
+          "usesLevel" : true
+        }
+      ],
+      "level2" : {
+        "data" : {
+          "gains" : {
+            "health" : 2
+          }
+        }
+      },
+      "level2Talent" : [
+        {
+          "name" : "Eye for a bargain",
+          "text" : "Example of a level 2 automatic talent."
+        }
+      ],
+      "level5" : {
+        "data" : {
+          "gains" : {
+            "health" : 2
+          },
+          "levelChoicePick" : 1,
+          "levelTalent" : true
+        }
+      },
+      "level5Choice" : [
+        {
+          "name" : "Bottomless bag",
+          "text" : "Example of a level 5 choice."
+        },
+        {
+          "name" : "Light foot",
+          "text" : "Example of a second choice."
+        }
+      ],
+      "level8" : {
+        "data" : {
+          "gains" : {
+            "health" : 2
+          }
+        }
+      },
+      "level8Talent" : [
+        {
+          "name" : "Last word",
+          "text" : "Example of a level 8 automatic talent."
+        }
+      ],
+      "pathType" : "Novice"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "01e1ef63-a41b-56ba-ba8d-f19b27e0987b",
+    "name" : "Peddler",
+    "slug" : "peddler",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "expertCategory" : "War",
+      "level3" : {
+        "data" : {
+          "attrs" : {
+            "custom" : "Increase two attributes by 1"
+          },
+          "gains" : {
+            "health" : 4,
+            "speed" : 1
+          },
+          "levelAttrChoice" : 2,
+          "levelChoicePick" : 1,
+          "levelTalent" : true
+        }
+      },
+      "level3Choice" : [
+        {
+          "name" : "Bulwark",
+          "text" : "Example of a choice, with two uses.",
+          "usesBase" : 2
+        },
+        {
+          "name" : "Stopping blow",
+          "text" : "Example of a second choice."
+        }
+      ],
+      "level3Talent" : [
+        {
+          "name" : "Watchful guard",
+          "text" : "Example of an automatic talent, without a counter."
+        }
+      ],
+      "level6" : {
+        "data" : {
+          "gains" : {
+            "health" : 4
+          }
+        }
+      },
+      "level6Talent" : [
+        {
+          "name" : "Rounds",
+          "text" : "Example of a level 6 talent: counter equal to the character level.",
+          "usesBase" : 0,
+          "usesLevel" : true
+        }
+      ],
+      "level9" : {
+        "data" : {
+          "gains" : {
+            "health" : 4
+          }
+        }
+      },
+      "level9Talent" : [
+        {
+          "name" : "Last watch",
+          "text" : "Example of a level 9 talent."
+        }
+      ],
+      "pathType" : "Expert"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "e7d95858-df00-5fe0-ad0c-7345f5397df2",
+    "name" : "Sentinel",
+    "slug" : "sentinel",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "expertCategory" : "Power",
+      "level3" : {
+        "data" : {
+          "attrs" : {
+            "custom" : "Increase two attributes by 1"
+          },
+          "gains" : {
+            "health" : 2,
+            "power" : 1
+          },
+          "levelAttrChoice" : 2,
+          "levelSpell" : true,
+          "levelTradition" : true
+        }
+      },
+      "level3Talent" : [
+        {
+          "name" : "Held breath",
+          "text" : "Example of a talent with uses: maximum = Power.",
+          "usesBase" : 0,
+          "usesPower" : true
+        }
+      ],
+      "level6" : {
+        "data" : {
+          "gains" : {
+            "health" : 2,
+            "power" : 1
+          },
+          "levelSpell" : true
+        }
+      },
+      "level6Talent" : [
+        {
+          "name" : "Controlled breathing",
+          "text" : "Example of a level 6 talent."
+        }
+      ],
+      "level9" : {
+        "data" : {
+          "gains" : {
+            "health" : 2,
+            "power" : 1
+          },
+          "levelSpell" : true
+        }
+      },
+      "level9Talent" : [
+        {
+          "name" : "Fresh air",
+          "text" : "Example of a level 9 talent."
+        }
+      ],
+      "pathType" : "Expert"
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "dd8bec27-2a9a-5f3e-a5b8-cc127cc99aab",
+    "name" : "Whisperer",
+    "slug" : "whisperer",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  }
+]

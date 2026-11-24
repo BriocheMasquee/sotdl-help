@@ -1,0 +1,49 @@
+[
+  {
+    "data" : {
+      "AGI" : 0,
+      "STR" : 0,
+      "ac" : 8,
+      "acceleration" : 2,
+      "cargo" : "8",
+      "crew" : "One pilot",
+      "deceleration" : 1,
+      "gabarit" : "g3",
+      "hp" : 30,
+      "maxSpeed" : "15",
+      "price" : "60 gp",
+      "space" : "2 × 4",
+      "vehicleAttacks" : [
+        {
+          "bonus" : 2,
+          "name" : "Ram",
+          "range" : "melee",
+          "text" : "([1d6](</roll/1d6[Damage]/Ram/damage>))"
+        }
+      ],
+      "vehicleDescriptors" : "Invented land vehicle",
+      "vehicleKind" : "Vehicle",
+      "vehicleSpecialActions" : [
+        {
+          "name" : "Gust",
+          "text" : "Example of a vehicle special action."
+        }
+      ],
+      "vehicleTraits" : [
+        {
+          "name" : "Folding sail",
+          "text" : "Example of a vehicle trait: display text."
+        }
+      ]
+    },
+    "descr" : "Fictional example from Help SotDL.",
+    "id" : "9a65ca6e-c23a-59af-a096-f9163d55294f",
+    "name" : "Sail Cart",
+    "slug" : "sail-cart",
+    "sources" : [
+      {
+        "name" : "help-sotdl"
+      }
+    ]
+  }
+]

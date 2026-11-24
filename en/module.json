@@ -1,0 +1,13 @@
+{
+  "acronym" : "HELP",
+  "author" : "Brioche Masquée",
+  "category" : "other",
+  "descr" : "Guide to using the system",
+  "id" : "help-sotdl",
+  "image" : "cover.webp",
+  "name" : "Help SotDL",
+  "shortDescr" : "Guide to using the system",
+  "slug" : "help-sotdl",
+  "system" : "sotdl",
+  "version" : "1.1.0"
+}
