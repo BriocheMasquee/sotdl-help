@@ -1,0 +1,134 @@
+[
+  {
+    "data" : {
+      "availability" : "Common",
+      "itemType" : "Weapon",
+      "price" : "5 pièces",
+      "weaponDamage" : "1d6",
+      "weaponHands" : "One",
+      "weaponType" : "BasicMelee"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "a77b9ac9-4169-5c68-9e52-2a2c33e2e75c",
+    "name" : "Bâton ferré",
+    "slug" : "baton-ferre",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "ammunitionRequirement" : true,
+      "ammunitionType" : "Bullet",
+      "availability" : "Common",
+      "itemType" : "Weapon",
+      "price" : "5 pièces",
+      "weaponDamage" : "1d6",
+      "weaponHands" : "Two",
+      "weaponType" : "Ranged"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "228533f7-69d9-5c68-a74c-5083cdc1767e",
+    "name" : "Lance-billes",
+    "slug" : "lance-billes",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "ammunitionType" : "Bullet",
+      "availability" : "Common",
+      "itemType" : "Weapon",
+      "price" : "5 pièces",
+      "uses" : 20,
+      "weaponType" : "Ammunition"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "2702e967-e864-510c-8f73-71a054c49aa8",
+    "name" : "Billes de verre",
+    "slug" : "billes-de-verre",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "armorDefenseFixed" : 12,
+      "armorType" : "LightArmor",
+      "availability" : "Common",
+      "itemType" : "Armor",
+      "price" : "5 pièces"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "b226d039-f5ad-5a77-acb2-16249ef59ac5",
+    "name" : "Gilet matelassé",
+    "slug" : "gilet-matelasse",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "availability" : "Common",
+      "itemType" : "Potion",
+      "price" : "5 pièces",
+      "uses" : 3
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "6f5a7397-a517-503d-b0fe-f7e19b08ba20",
+    "name" : "Tisane tonique",
+    "slug" : "tisane-tonique",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "availability" : "Common",
+      "gearType" : "Tool",
+      "itemType" : "AdventuringGear",
+      "price" : "5 pièces",
+      "uses" : 4
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "4b30ede9-56c1-57ea-a64a-123e35506ca3",
+    "name" : "Lanterne à huile",
+    "slug" : "lanterne-a-huile",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "itemType" : "Relic",
+      "relic" : [
+        {
+          "name" : "Murmure",
+          "text" : "Exemple d'effet de relique : texte d'affichage."
+        }
+      ]
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "5a71298f-2c74-5b1a-b565-48980e683e9d",
+    "name" : "Boussole bavarde",
+    "slug" : "boussole-bavarde",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  }
+]

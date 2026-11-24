@@ -1,0 +1,140 @@
+[
+  {
+    "data" : {
+      "spellDuration" : "Instantanée.",
+      "spellRank" : "0",
+      "spellTarget" : "Un objet léger à portée courte.",
+      "spellTradition" : {
+        "tradition" : "Air"
+      },
+      "spellType" : "Utility"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "e01a141c-8747-53dc-90ff-eb2fb7e43c41",
+    "name" : "Brise-minute",
+    "slug" : "brise-minute",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "spellDuration" : "1 min.",
+      "spellEffects" : [
+        {
+          "name" : "Effet",
+          "text" : "Exemple de texte d'effet."
+        }
+      ],
+      "spellRank" : "1",
+      "spellTarget" : "Une créature consentante.",
+      "spellTradition" : {
+        "tradition" : "Air"
+      },
+      "spellType" : "Utility"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "d7233396-ea47-5361-99bb-681bd2fd2aa2",
+    "name" : "Courant ascendant",
+    "slug" : "courant-ascendant",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "spellDuration" : "Instantanée.",
+      "spellEffects" : [
+        {
+          "name" : "Effet",
+          "text" : "Exemple d'attaque : jet de dégâts [1d6](/roll/1d6[Dégâts]/Bourrasque/damage)."
+        }
+      ],
+      "spellRank" : "1",
+      "spellTarget" : "Une créature à portée moyenne.",
+      "spellTradition" : {
+        "tradition" : "Air"
+      },
+      "spellType" : "Attack"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "6ccbf8f6-4f0d-5c0b-80d2-5570e78af812",
+    "name" : "Bourrasque de poche",
+    "slug" : "bourrasque-de-poche",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "spellDuration" : "1 min.",
+      "spellRank" : "1",
+      "spellTarget" : "Une zone à portée courte.",
+      "spellTradition" : {
+        "tradition" : "Air"
+      },
+      "spellType" : "Utility"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "6eac66f4-b50e-5032-b474-52f4c505693b",
+    "name" : "Voile de brume",
+    "slug" : "voile-de-brume",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "spellDuration" : "Instantanée.",
+      "spellRank" : "0",
+      "spellTarget" : "Un objet léger à portée courte.",
+      "spellTradition" : {
+        "tradition" : "Earth"
+      },
+      "spellType" : "Utility"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "14b38a73-d173-5ad6-8797-77a66125d550",
+    "name" : "Poussière fidèle",
+    "slug" : "poussiere-fidele",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "spellDuration" : "1 min.",
+      "spellEffects" : [
+        {
+          "name" : "Effet",
+          "text" : "Exemple de texte d'effet."
+        }
+      ],
+      "spellRank" : "1",
+      "spellTarget" : "Un point à portée moyenne.",
+      "spellTradition" : {
+        "tradition" : "Earth"
+      },
+      "spellType" : "Utility"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "7cb6aaf3-425c-53a4-9c86-e56ebaf88295",
+    "name" : "Mur de gravier",
+    "slug" : "mur-de-gravier",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  }
+]

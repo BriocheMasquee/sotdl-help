@@ -1,0 +1,74 @@
+[
+  {
+    "data" : {
+      "AGI" : 11,
+      "INT" : 10,
+      "STR" : 9,
+      "WIL" : 10,
+      "ancestryLevel4" : {
+        "choice" : [
+          {
+            "name" : "Lueur vive",
+            "text" : "Exemple de choix de niveau, avec un compteur.",
+            "usesBase" : 1
+          },
+          {
+            "name" : "Odeur du danger",
+            "text" : "Exemple de second choix, sans compteur."
+          }
+        ],
+        "gains" : {
+          "health" : 4
+        },
+        "levelChoicePick" : 1,
+        "levelTalent" : true,
+        "options" : "Choisissez un des deux talents."
+      },
+      "corruption" : {
+        "mode" : "fixed",
+        "value" : 0
+      },
+      "health" : {
+        "attribute" : "STR",
+        "bonus" : 0
+      },
+      "insanity" : {
+        "mode" : "fixed",
+        "value" : 0
+      },
+      "languagesProfessions" : "Vous parlez le [murmurois](rule).",
+      "perception" : 1,
+      "size" : "g1",
+      "speed" : 10,
+      "startLanguages" : [
+        {
+          "name" : "Murmurois",
+          "reference" : "/rule/murmurois",
+          "spoken" : true
+        }
+      ],
+      "startMode" : "fixed",
+      "tables" : "",
+      "talent" : [
+        {
+          "name" : "Lueur douce",
+          "text" : "Exemple : une petite lumière que vous pouvez allumer ou éteindre. Ce talent a deux utilisations.",
+          "usesBase" : 2
+        },
+        {
+          "name" : "Pas feutré",
+          "text" : "Exemple de talent sans compteur : il s'affiche, rien de plus."
+        }
+      ]
+    },
+    "descr" : "Peuple inventé pour les captures d'écran du Aide OSD. Les valeurs sont arbitraires.",
+    "id" : "5fe78d77-2dee-5541-9dd1-ef99a91ad112",
+    "name" : "Lumignon",
+    "slug" : "lumignon",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  }
+]

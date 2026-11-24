@@ -1,0 +1,49 @@
+[
+  {
+    "data" : {
+      "AGI" : 0,
+      "STR" : 0,
+      "ac" : 8,
+      "acceleration" : 2,
+      "cargo" : "8",
+      "crew" : "Un pilote",
+      "deceleration" : 1,
+      "gabarit" : "g3",
+      "hp" : 30,
+      "maxSpeed" : "15",
+      "price" : "60 co",
+      "space" : "2 × 4",
+      "vehicleAttacks" : [
+        {
+          "bonus" : 2,
+          "name" : "Heurt",
+          "range" : "mêlée",
+          "text" : "([1d6](</roll/1d6[Dégâts]/Heurt/damage>))"
+        }
+      ],
+      "vehicleDescriptors" : "Terrestre inventé",
+      "vehicleKind" : "Vehicle",
+      "vehicleSpecialActions" : [
+        {
+          "name" : "Rafale",
+          "text" : "Exemple d'action spéciale de véhicule."
+        }
+      ],
+      "vehicleTraits" : [
+        {
+          "name" : "Voile pliante",
+          "text" : "Exemple de trait de véhicule : texte d'affichage."
+        }
+      ]
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "4e330d53-b67d-54d9-bc76-8de28dff8621",
+    "name" : "Chariot à voile",
+    "slug" : "chariot-a-voile",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  }
+]

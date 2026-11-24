@@ -1,0 +1,14 @@
+[
+  {
+    "descr" : "Langue inventée pour l'Aide OSD : sert d'exemple de règle de type Langue.",
+    "id" : "94901727-10e3-50ea-ba29-b3585389aa77",
+    "name" : "Murmurois",
+    "slug" : "murmurois",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ],
+    "type" : "Language"
+  }
+]

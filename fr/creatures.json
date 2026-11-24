@@ -1,0 +1,96 @@
+[
+  {
+    "data" : {
+      "AGI" : 12,
+      "INT" : 6,
+      "STR" : 8,
+      "WIL" : 8,
+      "ac" : 12,
+      "cr" : 1,
+      "creatureAttacks" : [
+        {
+          "bonus" : 3,
+          "name" : "Morsure",
+          "range" : "mêlée",
+          "text" : "([1d6](</roll/1d6[Dégâts]/Morsure/damage>))"
+        },
+        {
+          "bonus" : 2,
+          "name" : "Jet de poussière",
+          "range" : "courte",
+          "text" : "([1d3](</roll/1d3[Dégâts]/Jet de poussière/damage>))"
+        }
+      ],
+      "creatureDescriptors" : "Animal",
+      "creatureSpecialAttacks" : [
+        {
+          "name" : "Nuage de poussière",
+          "text" : "Exemple d'attaque spéciale : texte d'affichage."
+        }
+      ],
+      "creatureTraits" : [
+        {
+          "name" : "Furtif",
+          "text" : "Exemple de trait : texte d'affichage."
+        }
+      ],
+      "gabarit" : "g1_2",
+      "hp" : 12,
+      "perception" : 11,
+      "speed" : 10
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "46a21d52-e13c-5bfb-bcc4-bbdf8724d5c5",
+    "name" : "Rôdeur de grenier",
+    "slug" : "rodeur-de-grenier",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "AGI" : 9,
+      "INT" : 10,
+      "STR" : 12,
+      "WIL" : 10,
+      "ac" : 14,
+      "cr" : 2,
+      "creatureAttacks" : [
+        {
+          "bonus" : 4,
+          "name" : "Poing de bois",
+          "range" : "mêlée",
+          "text" : "([1d6+2](</roll/1d6[Dégâts]+2/Poing de bois/damage>))"
+        }
+      ],
+      "creatureDescriptors" : "Animé",
+      "creatureSpecialActions" : [
+        {
+          "name" : "Appel au calme",
+          "text" : "Exemple d'action spéciale."
+        }
+      ],
+      "creatureTraits" : [
+        {
+          "name" : "Silencieux",
+          "text" : "Exemple de trait."
+        }
+      ],
+      "gabarit" : "g1",
+      "hp" : 25,
+      "perception" : 10,
+      "speed" : 8
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "76d3a64b-7a9e-5100-91f0-5fc1a012c8d9",
+    "name" : "Gardien de bibliothèque",
+    "slug" : "gardien-de-bibliotheque",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  }
+]

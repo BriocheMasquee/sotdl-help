@@ -1,0 +1,40 @@
+[
+  {
+    "data" : {
+      "AGI" : 10,
+      "INT" : 13,
+      "STR" : 9,
+      "WIL" : 11,
+      "ac" : 11,
+      "cr" : 0,
+      "creatureAttacks" : [
+        {
+          "bonus" : 1,
+          "name" : "Canne",
+          "range" : "mêlée",
+          "text" : "([1d3](</roll/1d3[Dégâts]/Canne/damage>))"
+        }
+      ],
+      "creatureDescriptors" : "Humaine inventée",
+      "creatureTraits" : [
+        {
+          "name" : "Mémoire des étagères",
+          "text" : "Exemple de trait de PNJ : texte d'affichage."
+        }
+      ],
+      "gabarit" : "g1",
+      "hp" : 10,
+      "perception" : 13,
+      "speed" : 10
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "64c5e9d9-c9d4-5535-ab7a-7a20316a20d1",
+    "name" : "Archiviste Mirelle",
+    "slug" : "archiviste-mirelle",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  }
+]

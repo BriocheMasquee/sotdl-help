@@ -1,0 +1,50 @@
+[
+  {
+    "columns" : [
+      {
+        "alignment" : "center",
+        "name" : "d6"
+      },
+      {
+        "alignment" : "left",
+        "name" : "Trouvaille"
+      }
+    ],
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "2be7de6d-0fc4-5ce9-81c7-39e2cd531de9",
+    "name" : "Trouvailles du jour",
+    "notes" : "",
+    "rows" : [
+      [
+        "1",
+        "Une clé sans serrure."
+      ],
+      [
+        "2",
+        "Un bouton de manteau."
+      ],
+      [
+        "3",
+        "Une carte à moitié déchirée."
+      ],
+      [
+        "4",
+        "Une pièce tordue."
+      ],
+      [
+        "5",
+        "Une plume bleue."
+      ],
+      [
+        "6",
+        "Rien du tout."
+      ]
+    ],
+    "slug" : "trouvailles-du-jour",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  }
+]

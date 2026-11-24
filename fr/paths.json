@@ -1,0 +1,222 @@
+[
+  {
+    "data" : {
+      "level1" : {
+        "data" : {
+          "attrs" : {
+            "custom" : "Augmentez deux attributs de 1"
+          },
+          "gains" : {
+            "health" : 3
+          },
+          "levelAttrChoice" : 2,
+          "levelProf" : true
+        }
+      },
+      "level1Talent" : [
+        {
+          "name" : "Boniment",
+          "text" : "Exemple de talent à utilisations : maximum = 1 + niveau du personnage.",
+          "usesBase" : 1,
+          "usesLevel" : true
+        }
+      ],
+      "level2" : {
+        "data" : {
+          "gains" : {
+            "health" : 2
+          }
+        }
+      },
+      "level2Talent" : [
+        {
+          "name" : "Œil pour les bonnes affaires",
+          "text" : "Exemple de talent automatique du niveau 2."
+        }
+      ],
+      "level5" : {
+        "data" : {
+          "gains" : {
+            "health" : 2
+          },
+          "levelChoicePick" : 1,
+          "levelTalent" : true
+        }
+      },
+      "level5Choice" : [
+        {
+          "name" : "Sac sans fond",
+          "text" : "Exemple de choix de niveau 5."
+        },
+        {
+          "name" : "Pied léger",
+          "text" : "Exemple de second choix."
+        }
+      ],
+      "level8" : {
+        "data" : {
+          "gains" : {
+            "health" : 2
+          }
+        }
+      },
+      "level8Talent" : [
+        {
+          "name" : "Dernier mot",
+          "text" : "Exemple de talent automatique du niveau 8."
+        }
+      ],
+      "pathType" : "Novice"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "c94402b4-e6b1-56e6-9c87-dddddd57a5da",
+    "name" : "Colporteur",
+    "slug" : "colporteur",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "expertCategory" : "War",
+      "level3" : {
+        "data" : {
+          "attrs" : {
+            "custom" : "Augmentez deux attributs de 1"
+          },
+          "gains" : {
+            "health" : 4,
+            "speed" : 1
+          },
+          "levelAttrChoice" : 2,
+          "levelChoicePick" : 1,
+          "levelTalent" : true
+        }
+      },
+      "level3Choice" : [
+        {
+          "name" : "Rempart",
+          "text" : "Exemple de choix, avec deux utilisations.",
+          "usesBase" : 2
+        },
+        {
+          "name" : "Coup d’arrêt",
+          "text" : "Exemple de second choix."
+        }
+      ],
+      "level3Talent" : [
+        {
+          "name" : "Garde attentive",
+          "text" : "Exemple de talent automatique, sans compteur."
+        }
+      ],
+      "level6" : {
+        "data" : {
+          "gains" : {
+            "health" : 4
+          }
+        }
+      },
+      "level6Talent" : [
+        {
+          "name" : "Ronde",
+          "text" : "Exemple de talent du niveau 6 : compteur égal au niveau du personnage.",
+          "usesBase" : 0,
+          "usesLevel" : true
+        }
+      ],
+      "level9" : {
+        "data" : {
+          "gains" : {
+            "health" : 4
+          }
+        }
+      },
+      "level9Talent" : [
+        {
+          "name" : "Dernière veille",
+          "text" : "Exemple de talent du niveau 9."
+        }
+      ],
+      "pathType" : "Expert"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "fcc52f2a-51ca-5caa-862f-26a8f6bd2180",
+    "name" : "Veilleur",
+    "slug" : "veilleur",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  },
+  {
+    "data" : {
+      "expertCategory" : "Power",
+      "level3" : {
+        "data" : {
+          "attrs" : {
+            "custom" : "Augmentez deux attributs de 1"
+          },
+          "gains" : {
+            "health" : 2,
+            "power" : 1
+          },
+          "levelAttrChoice" : 2,
+          "levelSpell" : true,
+          "levelTradition" : true
+        }
+      },
+      "level3Talent" : [
+        {
+          "name" : "Souffle retenu",
+          "text" : "Exemple de talent à utilisations : maximum = Puissance.",
+          "usesBase" : 0,
+          "usesPower" : true
+        }
+      ],
+      "level6" : {
+        "data" : {
+          "gains" : {
+            "health" : 2,
+            "power" : 1
+          },
+          "levelSpell" : true
+        }
+      },
+      "level6Talent" : [
+        {
+          "name" : "Respiration contrôlée",
+          "text" : "Exemple de talent du niveau 6."
+        }
+      ],
+      "level9" : {
+        "data" : {
+          "gains" : {
+            "health" : 2,
+            "power" : 1
+          },
+          "levelSpell" : true
+        }
+      },
+      "level9Talent" : [
+        {
+          "name" : "Grand air",
+          "text" : "Exemple de talent du niveau 9."
+        }
+      ],
+      "pathType" : "Expert"
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "569b8700-633d-538c-8508-146e127761d1",
+    "name" : "Souffleur",
+    "slug" : "souffleur",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  }
+]

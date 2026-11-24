@@ -1,0 +1,46 @@
+[
+  {
+    "data" : {
+      "attrs" : {
+        "AGI" : {
+          "value" : 1
+        },
+        "WIL" : {
+          "value" : -1
+        }
+      },
+      "corruption" : {
+        "mode" : "fixed",
+        "value" : 0
+      },
+      "eligibility" : "Exemple : un personnage vivant. Texte d'affichage seulement : la feuille ne vérifie rien.",
+      "health" : 2,
+      "insanity" : {
+        "dice" : "1d3",
+        "mode" : "variable"
+      },
+      "perception" : 1,
+      "tables" : "",
+      "talent" : [
+        {
+          "name" : "Pâleur",
+          "text" : "Exemple de talent d'une transformation."
+        },
+        {
+          "name" : "Écho",
+          "text" : "Exemple de talent à utilisations.",
+          "usesBase" : 1
+        }
+      ]
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "c2df56ac-d854-5f15-a57a-ab157b65763e",
+    "name" : "Reflet",
+    "slug" : "reflet",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  }
+]

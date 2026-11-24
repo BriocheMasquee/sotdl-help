@@ -1,0 +1,13 @@
+{
+  "acronym" : "TUTO",
+  "author" : "Brioche Masquée",
+  "category" : "other",
+  "descr" : "Guide d'utilisation du système",
+  "id" : "aide-osd",
+  "image" : "cover.webp",
+  "name" : "Aide OSD",
+  "shortDescr" : "Guide d'utilisation du système",
+  "slug" : "aide-osd",
+  "system" : "sotdl",
+  "version" : "1.0.0"
+}

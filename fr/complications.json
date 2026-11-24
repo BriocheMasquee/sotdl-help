@@ -1,0 +1,26 @@
+[
+  {
+    "data" : {
+      "tables" : "",
+      "trait" : [
+        {
+          "name" : "Tête en l’air",
+          "text" : "Exemple de trait : texte d'affichage."
+        },
+        {
+          "name" : "Rattrapage",
+          "text" : "Exemple de second trait ; le joueur peut y noter un choix."
+        }
+      ]
+    },
+    "descr" : "Exemple fictif de l'Aide OSD.",
+    "id" : "21ffc6b3-0560-5615-8ac4-e3634ad022ed",
+    "name" : "Distrait",
+    "slug" : "distrait",
+    "sources" : [
+      {
+        "name" : "aide-osd"
+      }
+    ]
+  }
+]
